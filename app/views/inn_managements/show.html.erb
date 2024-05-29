@@ -7,7 +7,7 @@
   <h1><%= @inn.name %></h1>
   <p class="lead">CNPJ: <%= @inn.registration_number %></p>
   <p class="lead">Endereço: <%= @inn.full_address %></p>
-  <div class="d-flex my-2">
+  <div class="d-flex my-2" id="inn-actions">
     <%= link_to "Fazer reserva de grupo", new_group_booking_path, class: "btn btn-primary me-3" %>
     <%= link_to 'Editar Pousada', edit_inn_dashboard_inns_path, class: 'btn btn-primary' %>
   </div>

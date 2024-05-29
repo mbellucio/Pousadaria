@@ -23,10 +23,14 @@ describe 'Inn owner register group booking' do
         neighborhood: 'Centro'
     })
     #act
-    login_as(inn_owner, scope: inn_owner)
+    login_as(inn_owner, scope: :inn_owner)
     visit root_path
-    click_on "Gestão de Pousadas"
-    click_on "Fazer reserva de grupo"
+    within("nav") do
+      click_on "Gestão de Pousadas"
+    end
+    within("div#inn-actions") do
+      click_on "Fazer reserva de grupo"
+    end
     #assert
     expect(page).to have_field "Nome"
     expect(page).to have_field "Data de entrada"
