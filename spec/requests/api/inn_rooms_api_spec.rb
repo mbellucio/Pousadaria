@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe 'Inn Room API' do
-  context "GET /api/v1/inn_rooms/:inn_room_id" do
+  context "GET /api/v1/inn_rooms/:id" do
     it 'get inn room by id successfully' do
       #arrange
       inn_owner = InnOwner.create!(

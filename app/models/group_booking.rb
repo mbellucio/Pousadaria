@@ -1,0 +1,2 @@
+class GroupBooking < ApplicationRecord
+end
